@@ -4,14 +4,11 @@
 {% providers_media_js %}
 
 
-<h1>Django Login Mega-Tutorial</h1>
+<h1>SIR gárda oldala</h1>
 {% if user.is_authenticated %}
-<p>Welcome {{ user.username }} !!!</p>
+<p>Üdv {{ user.email }} !!!</p>
 <p><a href="{% url 'account_logout' %}">Log out</a>
 {% else %}
-<p><a href="{% url 'account_signup' %}">Sign Up</a></p>
-<p><a href="{% url 'account_login' %}">Log In </a></p>
-
-
+<p>Gyere jelentkezz be :)</p>
 <p><a href="{% provider_login_url "facebook" method="js_sdk" %}">Log In - Facebook </a></p>
 {% endif %}

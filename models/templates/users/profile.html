@@ -21,11 +21,7 @@ Date: {{ user.date_joined}}
 <ul>
 {% for event in events %}
 
-    <li>{{ event.year }} --> {{ event.title }} (
-        {% for user in event.orgaizers %}
-        user.email
-        {% endfor %}
-        )</li>
+    <li>{{ event.year }} --> {{ event.title }}</li>
 
 {% empty %}
     <li>Sorry, no events</li>
